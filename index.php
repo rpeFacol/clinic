@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Teste para o projeto</title>
+    <title>Praticando!!</title>
   </head>
   <body>
 
