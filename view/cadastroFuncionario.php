@@ -1,4 +1,4 @@
-<?php 
+<?php
 require 'painel.php';
 ?>
 <div class="centro">
@@ -26,10 +26,12 @@ Remover
         <div class="container">
             <div class="row">
                    <input class="form-control" style="width:300px;" type="text" id="nome" name="nome" placeholder="Digite seu nome" maxlength="30" >
-                   <br>                   
+                   <br>
                    <input class="form-control" style="width:200px;" type="text" id="cpf" name="cpf" placeholder="Digite seu CPF" maxlength="15" >
                    <br>
-                   <input class="form-control" style="width:150px;" type="text" id="telefone" name="telefone" placeholder="Digite seu Telefone" maxlength="12" >  
+                   <input class="form-control" style="width:150px;" type="text" id="telefone" name="telefone" placeholder="Digite seu Telefone" maxlength="12" >
+                   <br>
+                   <input class="form-control" style="width:100px;" type="text" id="dNascimento" name="dNascimento" placeholder="Data de Nascimento" maxlength="10" > 
             </div>
         </div>
     </form>
