@@ -8,7 +8,7 @@ class Acesso {
 
     public function Conexao() {
     // Colocar 1 - qual o localhost; 2 - usuario do banco; 3 - senha do banco e 4 - nome do banco.
-        $this->cnx = mysqli_connect("localhost", "root", "", ""); 
+        $this->cnx = mysqli_connect("localhost", "root", "123", "clinica"); 
 
         if (mysqli_connect_errno()) {
             echo "Failed to connect to MySQL: " . mysqli_connect_error();

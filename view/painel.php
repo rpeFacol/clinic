@@ -1,3 +1,7 @@
+<?php 
+  require_once '../controller/usuariosController.php';
+  Processo("redirecionamento");
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -7,21 +11,22 @@
     
     <!-- As 3 meta tags acima *devem* vir em primeiro lugar dentro do `head`; qualquer outro conteúdo deve vir *após* essas tags -->
     
-    <title>ClinicANUS</title>
+    <title>Clinica</title>
 
     <!-- Bootstrap e Jquery -->
      <!-- Latest compiled and minified CSS -->
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+     <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
 
     <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap/css/bootstrap-theme.min.css">
 
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link  href="css/main.css" rel="stylesheet">
 
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+
+    <script src="js/jquery.js"></script>
+    <script src="css/bootstrap/js/bootstrap.min.js"></script>
+  
   </head>
   
   <body>
@@ -33,17 +38,37 @@
         <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
           <ul class="nav navbar-nav">
             <li><a href="funcionario.php">Funcionário</a></li>
-            <li><a href="paciente.php">Paciente</a></li>
+             <!-- Drop para view do paciente  -->
+             <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              Paciente <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" role="menu">
+                  <li><a href="cadastrarPaciente.php">Cadastro</a></li>
+                  <li><a href="pesqPaciente.php">Pesquisa</a></li>
+              </ul>
+            </li>
             <li><a href="consulta.php">Consulta</a></li>
+            <!-- Drop para view do usuario  -->
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              Usuarios <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" role="menu">
+                  <li><a href="cadastrarUsuario.php">Cadastro</a></li>
+                  <li><a href="pesqUsuario.php">Pesquisa</a></li>
+              </ul>
+            </li>
+            <li><a href="../controller/logout.php">Sair</a></li>
           </ul>
         </div><!-- /.nav-collapse -->
       </div><!-- /.container -->
     </nav>
     
-<div class="jumbotron" style="background-image:url('images/red.jpeg'); color: #FFFFFF;">
+<div class="jumbotron" style="background-image:url('images/painel_images.jpg'); ">
   	<div class="container" >  
-		<h1>ClinicANAL</h1>
-	</div><!-- fim .container dentro do jumbotron -->
+    <h1 style="text-align: center;margin-left: auto; margin-right: auto; color: #000000;">Clinica</h1>
+  </div><!-- fim .container dentro do jumbotron -->
 </div><!-- fim .jumbotron -->
   
-  
+
