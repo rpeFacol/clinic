@@ -1,6 +1,6 @@
 <?php
 
-$arquivo = $_SERVER['DOCUMENT_ROOT'] . '/clinica/model/Usuarios.php';
+$arquivo = $_SERVER['DOCUMENT_ROOT'] . '/clinic/model/Usuarios.php';
 
 include_once($arquivo);  // ----- CARREGA A CLASSE CONSULTA  ----- //
 
