@@ -96,7 +96,7 @@ function Processo($Processo) {
                             $_SESSION['login'] = $_POST['login'];
                             $_SESSION['senha'] = $_POST['senha'];
                             echo "<center><h1>Aguarde um instante</h1></center>";
-                            echo "<script>setTimeout(function(){window.location='view/painel.php'}, 3000);</script>";
+                            echo "<script>setTimeout(function(){window.location='view/home.php'}, 3000);</script>";
                         }else{
                             echo "<center><h1 style='color:red;'>Nome de Usuário ou Senha Inválidos</h1></center>";
                             echo "<script>setTimeout(function(){window.location='index.php'}, 3000);</script>";

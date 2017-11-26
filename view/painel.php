@@ -33,11 +33,20 @@
  	<nav class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
         <div class="navbar-header">
-          	<a class="navbar-brand" href="painel.php">Inicio</a>
+          	<a class="navbar-brand" href="home.php">Inicio</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
           <ul class="nav navbar-nav">
-            <li><a href="funcionario.php">Funcionário</a></li>
+            <!-- Drop para view do funcionario  -->
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              Funcionario <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" role="menu">
+                  <li><a href="cadastrarFuncionario.php">Cadastro</a></li>
+                  <li><a href="pesqFuncionario.php">Pesquisa</a></li>
+              </ul>
+            </li>
              <!-- Drop para view do paciente  -->
              <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
