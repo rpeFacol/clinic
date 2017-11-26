@@ -1,34 +1,17 @@
 <?php
-require 'painel.php';
+include 'painel.php';
+require_once '../controller/funcionarioController.php';
+Proc2("incluir");
 ?>
-<div class="centro">
-<button type="submit" class="btn btn-success" onclick="window.location.href='cadastroFuncionario.php'">
-<span class="glyphicon glyphicon-plus"></span>
-Cadastrar
-</button>
 
 
-<button type="submit" class="btn btn-primary">
-<span class="glyphicon glyphicon-pencil"></span>
-Editar
-</button>
-
-<button type="submit" class="btn btn-danger">
-<span class="glyphicon glyphicon-trash"></span>
-Remover
-
-</button>
-</div>
-<br>
-<br>
-
-    <form action="" method="post">
+    <form action="#" method="post">
         <div class="container">
         <div style="margin-left: auto;margin-right: auto; width: 400px;">
             <div class="row">
                    <input class="form-control" style="width:300px;" type="text" id="nome" name="nome" placeholder="Nome" maxlength="30" >
                    <br>
-                   <input class="form-control" style="width:150px;" type="text" id="dataNasc" name="dataNasc" placeholder="Data de Nasc." maxlength="11" >                   
+                   <input class="form-control" style="width:150px;" type="date" id="dataNasc" name="dataNasc" placeholder="Data de Nasc." maxlength="11" >                   
                    <br>
                    <input class="form-control" style="width:300px;" type="text" id="cargo" name="cargo" placeholder="Digite o Cargo" maxlength="30" >                   
                    <br>Endereço:
@@ -37,7 +20,7 @@ Remover
                    <input class="form-control" style="width:300px;" type="text" id="logradouro" name="logradouro" placeholder="Logradouro" maxlength="30" >                   
                    <br>
                    <input class="form-control" style="width:130px;float:left;" type="text" id="bairro" name="bairro" placeholder="Bairro" maxlength="30" >                   
-                   <input class="form-control" style="width:50px;float:left;" type="text" id="numero" name="numero" placeholder="Nº" maxlength="30" > 
+                   <input class="form-control" style="width:50px;float:left;" type="number" id="numero" name="numero" placeholder="Nº" maxlength="30" > 
                    <input class="form-control" style="width:115px;float:left;" type="text" id="complemento" name="complemento" placeholder="Complemento" maxlength="30" >                                     
                    <br>
                    <br>
@@ -46,7 +29,7 @@ Remover
                    <br>
                    <input class="form-control" style="width:200px;" type="text" id="cpf" name="cpf" placeholder="Digite o CPF" maxlength="15" >
                    <br>
-                   <input class="form-control" style="width:150px;" type="text" id="telefone" name="telefone" placeholder="Telefone" maxlength="12" >  
+                   <input class="form-control" style="width:150px;" type="text" id="tel_funcionario" name="tel_funcionario" placeholder="Telefone" maxlength="12" >  
                    <br>
                    <br>
                    <div class="centro" style="margin-left: auto;margin-right: auto; width: 180px;">
@@ -62,8 +45,8 @@ Remover
                    <br><br>
                    <br>
                    <br>
-                   
->>>>>>> funcionario
+                   <input type="hidden" name="ok" id="ok"/>     
+
             </div>
         </div>
     </form>
